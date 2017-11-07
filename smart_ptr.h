@@ -52,8 +52,8 @@ private:
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-					Constructors
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+                        Constructors
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
  template<typename T>
 smart_ptr<T>::smart_ptr() 
 	: ptr(nullptr)
@@ -79,8 +79,8 @@ smart_ptr<T>::smart_ptr(T* p)
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-			Copy and move constructors
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+               Copy and move constructors
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 template<typename T>
 smart_ptr<T>::smart_ptr(const smart_ptr& p) 
 	: ptr(p.ptr)
@@ -101,8 +101,8 @@ smart_ptr<T>::smart_ptr(smart_ptr&& p)
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-			Copy and move assignments
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+               Copy and move assignments
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 template<typename T>
 smart_ptr<T>& smart_ptr<T>::operator=(const smart_ptr& p){
@@ -138,8 +138,8 @@ smart_ptr<T>& smart_ptr<T>::operator=(smart_ptr&& p){
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-						Destructor
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+                          Destructor
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 template<typename T>
 smart_ptr<T>::~smart_ptr(){
 	if (ref_counter){
@@ -157,8 +157,8 @@ smart_ptr<T>::~smart_ptr(){
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-    Methods to extract a raw pointer
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+        Methods to extract a raw pointer
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 template<typename T>
 T* smart_ptr<T>::operator->() const {
@@ -178,8 +178,8 @@ T* smart_ptr<T>::get() const {
 
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-				Auxiliary methods
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+                      Auxiliary methods
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 template<typename T>
 bool smart_ptr<T>::empty() const {
